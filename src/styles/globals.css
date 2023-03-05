@@ -1,4 +1,36 @@
-:root {
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.container {
+  @apply mx-auto px-5 lg:px-36;
+}
+
+.bg-set {
+  @apply bg-no-repeat bg-bottom bg-cover;
+}
+
+.head-1 {
+  @apply text-3xl lg:text-5xl font-bold max-w-lg;
+}
+
+.head-2 {
+  @apply text-2xl lg:text-4xl font-bold max-w-lg;
+}
+
+.head-3 {
+  @apply text-xl lg:text-3xl font-bold max-w-lg;
+}
+
+.head-4 {
+  @apply lg:text-lg font-bold max-w-lg;
+}
+
+.paragraph {
+  @apply lg:text-lg text-gray-600 max-w-xl my-5;
+}
+
+/* :root {
   --max-width: 1100px;
   --border-radius: 12px;
   --font-mono: ui-monospace, Menlo, Monaco, 'Cascadia Mono', 'Segoe UI Mono',
@@ -104,4 +136,4 @@ a {
   html {
     color-scheme: dark;
   }
-}
+} */
