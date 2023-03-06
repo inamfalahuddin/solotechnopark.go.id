@@ -28,6 +28,7 @@ module.exports = {
         "body-8": "url('../../src/images/bg-event-2.png')",
         "mega-mendung":
           "url('../../src/images/Background-Profile-Right-Side.png')",
+        memphis: "url('../../src/images/memphis_1-min.png')",
       },
     },
   },

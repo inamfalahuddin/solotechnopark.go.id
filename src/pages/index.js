@@ -3,16 +3,16 @@ import Head from "next/head";
 import Navbar from "@/components/Navbar";
 import Button from "@/components/Button";
 import ThumbProfile from "@/components/ThumbProfile";
-import Card from "@/components/Card";
-import CardSektor from "@/components/CardSektor";
+import Card from "@/components/cards/Card";
+import CardSektor from "@/components/cards/CardSektor";
 import IconManufaktur from "@/images/icon-manufactur.svg";
 import KawasanSTP from "@/images/Kawsan-STP-6.png";
 import FungsiDanPeran from "@/images/Fungsi-dan-Peran.png";
 import Image from "next/image";
 import Mitra from "@/components/Mitra";
-import CardLayanan from "@/components/CardLayanan";
+import CardLayanan from "@/components/cards/CardLayanan";
 import Testimonial from "@/components/Testimonial";
-import Event from "@/components/Event";
+import Event from "@/components/cards/CardEvent";
 import Footer from "@/components/Footer";
 
 export default function Home() {

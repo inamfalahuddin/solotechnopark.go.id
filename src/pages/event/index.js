@@ -1,9 +1,10 @@
 import Button from "@/components/Button";
-import Card from "@/components/Card";
+import CardEvent from "@/components/cards/CardEvent";
 import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
 import Head from "next/head";
 import React from "react";
+import Pagination from "@/components/Pagination";
 
 function index() {
   return (
@@ -21,10 +22,10 @@ function index() {
         <Navbar />
 
         <section>
-          <div className="container pb-20">
-            <Card
+          <div className="container">
+            <div
               className={
-                "border px-10 py-10 grid grid-cols-1 lg:grid-cols-4 gap-10"
+                "px-10 py-10 grid grid-cols-1 lg:grid-cols-4 gap-10 bg-red-50 rounded-lg"
               }
             >
               <div>
@@ -58,7 +59,26 @@ function index() {
                   Cari Event
                 </Button>
               </div>
-            </Card>
+            </div>
+          </div>
+        </section>
+
+        <section>
+          <div className="container my-20">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
+              <CardEvent />
+              <CardEvent />
+              <CardEvent />
+              <CardEvent />
+              <CardEvent />
+              <CardEvent />
+              <CardEvent />
+              <CardEvent />
+              <CardEvent />
+            </div>
+            <div className="flex justify-center">
+              <Pagination />
+            </div>
           </div>
         </section>
       </main>

@@ -1,9 +1,6 @@
 // import styles from "@/styles/Home.module.css";
 import Head from "next/head";
 import Navbar from "@/components/Navbar";
-import Button from "@/components/Button";
-import Card from "@/components/Card";
-import CardSektor from "@/components/CardSektor";
 import ImageProfile from "@/images/Mas-Yudith.webp";
 import Dinto from "@/images/Dinto.webp";
 import KawasanSTP from "@/images/Kawsan-STP-6.png";
@@ -12,10 +9,6 @@ import IconCheck from "@/images/check.svg";
 import ProfileUPTD from "@/images/profil-uptd.webp";
 import SejarahBerdiri from "@/images/Sejarah-2-1536x798.png.webp";
 import Image from "next/image";
-import Mitra from "@/components/Mitra";
-import CardLayanan from "@/components/CardLayanan";
-import Testimonial from "@/components/Testimonial";
-import Event from "@/components/Event";
 import Footer from "@/components/Footer";
 
 export default function Profile() {
@@ -121,8 +114,8 @@ export default function Profile() {
 
         <section>
           <div className="container py-20">
-            <div className="grid grid-cols-1 lg:grid-cols-3 gap-10">
-              <div className="col-span-2 mx-auto flex flex-col justify-center items-start">
+            <div className="grid grid-cols-1 lg:grid-cols-3 md:gap-10">
+              <div className="col-span-2 mx-auto flex flex-col justify-center lg:items-start ">
                 <h4 className="uppercase text-lg font-medium text-gray-600">
                   Leadership{" "}
                 </h4>
@@ -154,7 +147,7 @@ export default function Profile() {
                   beberapa program yang kami adakan di dalam Solo Technopark.
                 </p>
               </div>
-              <div className="ml-auto mr-0 flex flex-col justify-center items-center">
+              <div className="flex flex-col justify-center items-end mx-auto md:ml-auto md:mr-0">
                 <div className="bg-primary-100 w-60 rounded-lg overflow-hidden flex justify-center items-center">
                   <Image src={ImageProfile} alt="image profile" />
                 </div>

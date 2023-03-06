@@ -18,7 +18,9 @@ function Navbar() {
       style={{ zIndex: 999 }}
     >
       <div className="container flex items-center justify-between">
-        <Image src={LogoSTP} alt="Logo STP" width={180} />
+        <Link href={"/"}>
+          <Image src={LogoSTP} alt="Logo STP" width={180} />
+        </Link>
         {/* Navigate */}
         <div
           className="p-3 rounded-full bg-slate-50 lg:hover:bg-slate-50 cursor-pointer transition-all md:hidden right-5 fixed z-50"
@@ -115,13 +117,13 @@ function Navbar() {
           </Link>
           <Link
             className="px-3  transition-all hover:text-primary-100"
-            href={"/"}
+            href={"/kontak"}
           >
             Kontak
           </Link>
           <Link
             className="px-3 lg:pr-0 transition-all hover:text-primary-100"
-            href={"/"}
+            href={"/berita"}
           >
             Berita
           </Link>
