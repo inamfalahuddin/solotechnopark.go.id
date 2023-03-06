@@ -67,7 +67,7 @@ export default function Profile() {
                 <h2 className="capitalize head-2 mt-5">Misi</h2>
                 <ul className="my-5">
                   <li className="flex items-start gap-5 my-5">
-                    <Image src={IconCheck} alrt="check" />
+                    <Image src={IconCheck} alt="check" />
                     <span>
                       Melaksanakan upaya peningkatan kesejahteraan masyarakat
                       melalui peningkatan kompetensi sumber daya manusia dan
@@ -75,14 +75,14 @@ export default function Profile() {
                     </span>
                   </li>
                   <li className="flex items-start gap-5 my-5">
-                    <Image src={IconCheck} alrt="check" />
+                    <Image src={IconCheck} alt="check" />
                     <span>
                       Menumbuhkembangkan perusahaan pemula berbasis teknologi
                       khususnya yang mendukung potensi lokal.
                     </span>
                   </li>
                   <li className="flex items-start gap-5 my-5">
-                    <Image src={IconCheck} alrt="check" />
+                    <Image src={IconCheck} alt="check" />
                     <span>
                       Membangun budaya inovatif, transfer teknologi, semangat
                       kewirausahaan dan standar mutu untuk meningkatkan daya
@@ -90,7 +90,7 @@ export default function Profile() {
                     </span>
                   </li>
                   <li className="flex items-start gap-5 my-5">
-                    <Image src={IconCheck} alrt="check" />
+                    <Image src={IconCheck} alt="check" />
                     <span>
                       Mengembangkan potensi ekonomi dan meningkatkan daya tarik
                       investasi.
@@ -165,7 +165,7 @@ export default function Profile() {
             <div className="flex flex-wrap  justify-evenly items-center">
               <div className="my-5">
                 <div className="w-72 rounded-md overflow-hidden flex border-b-4 border-primary-100 justify-center items-center ">
-                  <Image src={Dinto} alrt="check" />
+                  <Image src={Dinto} alt="check" />
                 </div>
                 <div className="text-center my-5">
                   <h4 className="head-4">Christian Ardinto</h4>
@@ -174,7 +174,7 @@ export default function Profile() {
               </div>
               <div className="my-5">
                 <div className="w-72 rounded-md overflow-hidden flex border-b-4 border-primary-100 justify-center items-center ">
-                  <Image src={Dinto} alrt="check" />
+                  <Image src={Dinto} alt="check" />
                 </div>
                 <div className="text-center my-5">
                   <h4 className="head-4">Christian Ardinto</h4>
@@ -183,7 +183,7 @@ export default function Profile() {
               </div>
               <div className="my-5">
                 <div className="w-72 rounded-md overflow-hidden flex border-b-4 border-primary-100 justify-center items-center ">
-                  <Image src={Dinto} alrt="check" />
+                  <Image src={Dinto} alt="check" />
                 </div>
                 <div className="text-center my-5">
                   <h4 className="head-4">Christian Ardinto</h4>

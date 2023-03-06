@@ -1,5 +1,7 @@
+import Event from "@/components/Event";
 import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
+import Pagination from "@/components/Pagination";
 import Head from "next/head";
 import React from "react";
 
@@ -17,9 +19,22 @@ function Berita() {
       </Head>
       <main>
         <Navbar />
-        <section className="bg-memphis">
-          <div className="container py-20">
-            <h1>Hai sayang</h1>
+        <section>
+          <div className="container pt-10 pb-20">
+            <div className="flex flex-wrap justify-center md:gap-10">
+              <Event />
+              <Event />
+              <Event />
+              <Event />
+              <Event />
+              <Event />
+              <Event />
+              <Event />
+              <Event />
+            </div>
+            <div className="flex justify-center">
+              <Pagination />
+            </div>
           </div>
         </section>
       </main>

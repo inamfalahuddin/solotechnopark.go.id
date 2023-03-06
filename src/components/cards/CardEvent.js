@@ -6,10 +6,12 @@ function CardEvent() {
   return (
     <Card
       className={
-        "border grid grid-cols-7 gap-5 shadow-lg my-2 hover:shadow-sm transition-all overflow-hidden"
+        "border grid grid-cols-1 md:grid-cols-7 gap-5 shadow-lg my-2 hover:shadow-sm transition-all overflow-hidden"
       }
     >
-      <div className="col-span-3 bg-primary-100 overflow-hidden">hai</div>
+      <div className="col-span-7 md:col-span-3 bg-primary-100 overflow-hidden">
+        hai
+      </div>
       <div className="col-span-4 p-5">
         <h4 className="font-bold capitalize text-primary-100">
           Diklat, pelatihan
