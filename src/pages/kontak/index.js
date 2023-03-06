@@ -65,7 +65,7 @@ function Kontak() {
                       <input
                         className="bg-slate-100 w-full outline-primary-100 block text-md py-3 px-4 rounded-full"
                         type={"email"}
-                        placeholder="Masukan nama lengkap disini"
+                        placeholder="Masukan email disini"
                       />
                     </div>
                     <div className="my-5">
@@ -73,7 +73,7 @@ function Kontak() {
                       <input
                         className="bg-slate-100 w-full outline-primary-100 block text-md py-3 px-4 rounded-full"
                         type={"text"}
-                        placeholder="Masukan nama lengkap disini"
+                        placeholder="Tentang apa yang ingin anda tanyakan"
                       />
                     </div>
                     <div className="my-5">
@@ -81,14 +81,29 @@ function Kontak() {
                       <textarea
                         className="bg-slate-100 w-full outline-primary-100 block text-md py-3 px-4 rounded-lg"
                         type={"text"}
-                        placeholder="Masukan nama lengkap disini"
+                        placeholder="Masukan pesan yang ingin anda sampaikan disini"
                       />
                     </div>
-                    <Button className={"w-full hover:opacity-50"}>Kirim</Button>
+                    <Button
+                      className={"gradient-to-right w-full hover:opacity-50"}
+                    >
+                      Kirim
+                    </Button>
                   </form>
                 </Card>
               </div>
-              <div></div>
+              <div>
+                <div className="header border-b ">
+                  <h4 className="uppercase text-lg font-medium text-gray-600">
+                    Hubungi kami
+                  </h4>
+                  <h2 className="capitalize head-2 my-5">
+                    Tidak bisa menemukan{" "}
+                    <strong className="text-primary-100">informasi </strong>
+                    yang Anda cari?
+                  </h2>
+                </div>
+              </div>
             </div>
           </div>
         </section>

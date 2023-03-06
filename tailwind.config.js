@@ -29,9 +29,6 @@ module.exports = {
         "mega-mendung":
           "url('../../src/images/Background-Profile-Right-Side.png')",
         memphis: "url('../../src/images/memphis_1-min.png')",
-        "gradient-to-bottom": "bg-gradient-to-b from-red-600 to-orange-600",
-        "gradient-to-right":
-          "bg-gradient-to-r from-red-600 to-orange-600 text-white ",
       },
     },
   },

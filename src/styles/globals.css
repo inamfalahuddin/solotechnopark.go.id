@@ -30,6 +30,10 @@
   @apply lg:text-lg text-gray-600 max-w-xl my-5;
 }
 
+.gradient-to-right {
+  @apply bg-gradient-to-r from-red-600 to-orange-600 text-white;
+}
+
 /* :root {
   --max-width: 1100px;
   --border-radius: 12px;
