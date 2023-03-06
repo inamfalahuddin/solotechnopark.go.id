@@ -12,7 +12,7 @@ import Image from "next/image";
 import Mitra from "@/components/Mitra";
 import CardLayanan from "@/components/cards/CardLayanan";
 import Testimonial from "@/components/Testimonial";
-import Event from "@/components/cards/CardEvent";
+import Event from "@/components/Event";
 import Footer from "@/components/Footer";
 
 export default function Home() {
