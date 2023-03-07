@@ -30,6 +30,15 @@ module.exports = {
           "url('../../src/images/Background-Profile-Right-Side.png')",
         memphis: "url('../../src/images/memphis_1-min.png')",
       },
+      animation: {
+        fadeIn: "fadeIn 1s ease-in",
+      },
+      keyframes: {
+        fadeIn: {
+          "0%": { display: "blockk", opacity: "0" },
+          "100%": { opacity: "1" },
+        },
+      },
     },
   },
   plugins: [],
