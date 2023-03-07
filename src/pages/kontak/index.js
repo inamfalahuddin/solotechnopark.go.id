@@ -1,13 +1,21 @@
 import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
 import Head from "next/head";
-import React from "react";
+import React, { useEffect } from "react";
 import HeroImage from "@/images/Foto-Web.webp";
 import Image from "next/image";
 import Card from "@/components/cards/Card";
 import Button from "@/components/Button";
+import { useSetRecoilState } from "recoil";
+import navigateState from "@/recoil/atoms/navigateAtom";
 
 function Kontak() {
+  const setNavigation = useSetRecoilState(navigateState);
+
+  useEffect(() => {
+    setNavigation("kontak");
+  }, []);
+
   return (
     <>
       <Head>

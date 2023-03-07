@@ -3,10 +3,14 @@ import React, { useState } from "react";
 import LogoSTP from "@/images/Logo-Technopark-Remake-Solo-1.webp";
 import ArrowDown from "@/images/down-arrow-svgrepo-com.svg";
 import Link from "next/link";
+import { useRecoilState } from "recoil";
+import navigateState from "@/recoil/atoms/navigateAtom";
 
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [dropdown, setDropdown] = useState(false);
+
+  const [navigation, setNavigation] = useRecoilState(navigateState);
 
   const onClickHamburger = (e) => {
     setIsOpen(!isOpen);
@@ -51,13 +55,17 @@ function Navbar() {
           }`}
         >
           <Link
-            className="px-3  transition-all hover:text-primary-100 font-bold text-primary-100"
+            className={`px-3  transition-all hover:text-primary-100 ${
+              navigation === "beranda" ? "font-bold text-primary-100" : null
+            }`}
             href={"/"}
           >
             Beranda
           </Link>
           <Link
-            className="px-3  transition-all hover:text-primary-100"
+            className={`px-3  transition-all hover:text-primary-100 ${
+              navigation === "profil" ? "font-bold text-primary-100" : null
+            }`}
             href={"/profil"}
           >
             Profil
@@ -110,19 +118,25 @@ function Navbar() {
             </div>
           </span>
           <Link
-            className="px-3  transition-all hover:text-primary-100"
+            className={`px-3  transition-all hover:text-primary-100 ${
+              navigation === "event" ? "font-bold text-primary-100" : null
+            }`}
             href={"/event"}
           >
             Event
           </Link>
           <Link
-            className="px-3  transition-all hover:text-primary-100"
+            className={`px-3  transition-all hover:text-primary-100 ${
+              navigation === "kontak" ? "font-bold text-primary-100" : null
+            }`}
             href={"/kontak"}
           >
             Kontak
           </Link>
           <Link
-            className="px-3 lg:pr-0 transition-all hover:text-primary-100"
+            className={`px-3  transition-all hover:text-primary-100 ${
+              navigation === "berita" ? "font-bold text-primary-100" : null
+            }`}
             href={"/berita"}
           >
             Berita

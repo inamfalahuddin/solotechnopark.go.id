@@ -10,8 +10,17 @@ import ProfileUPTD from "@/images/profil-uptd.webp";
 import SejarahBerdiri from "@/images/Sejarah-2-1536x798.png.webp";
 import Image from "next/image";
 import Footer from "@/components/Footer";
+import { useEffect, useState } from "react";
+import { useSetRecoilState } from "recoil";
+import navigateState from "@/recoil/atoms/navigateAtom";
 
 export default function Profile() {
+  const setNavigation = useSetRecoilState(navigateState);
+
+  useEffect(() => {
+    setNavigation("profil");
+  }, []);
+
   return (
     <>
       <Head>

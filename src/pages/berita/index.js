@@ -2,10 +2,18 @@ import Event from "@/components/Event";
 import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
 import Pagination from "@/components/Pagination";
+import navigateState from "@/recoil/atoms/navigateAtom";
 import Head from "next/head";
-import React from "react";
+import React, { useEffect } from "react";
+import { useSetRecoilState } from "recoil";
 
 function Berita() {
+  const setNavigation = useSetRecoilState(navigateState);
+
+  useEffect(() => {
+    setNavigation("berita");
+  }, []);
+
   return (
     <>
       <Head>
