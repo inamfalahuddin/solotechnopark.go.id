@@ -30,7 +30,7 @@ export default function Home() {
       <main>
         <header className="bg-header-1 bg-set">
           <Navbar />
-          <div className="container lg:h-[88vh] pb-20 grid lg:grid-cols-2">
+          <div className="container lg:h-[88vh] pb-20 grid lg:grid-cols-2 md:gap-20">
             <div className="flex flex-col items-start justify-center py-5 lg:py-5">
               <h1 className="head-1">
                 Kawasan <strong className="text-primary-100">Inovatif</strong>{" "}
@@ -118,7 +118,7 @@ export default function Home() {
             <h2 className="capitalize head-3 mx-auto text-center text-white">
               Layanan dasar solo technopark
             </h2>
-            <div className="flex flex-wrap justify-center mt-10 lg:gap-5">
+            <div className="flex flex-wrap justify-center mt-10 md:gap-5">
               <CardLayanan src="" title="layanan teknis" />
               <CardLayanan src="" title="pengembangan teknologi" />
               <CardLayanan src="" title="layanan inkubasi" />

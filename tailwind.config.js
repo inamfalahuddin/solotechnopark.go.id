@@ -31,7 +31,7 @@ module.exports = {
         memphis: "url('../../src/images/memphis_1-min.png')",
       },
       animation: {
-        fadeIn: "fadeIn 1s ease-in",
+        fadeIn: "fadeIn .5s ease-in",
       },
       keyframes: {
         fadeIn: {
