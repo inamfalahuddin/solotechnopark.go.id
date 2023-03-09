@@ -15,15 +15,15 @@ import Testimonial from "@/components/Testimonial";
 import Event from "@/components/Event";
 import Footer from "@/components/Footer";
 import navigateState from "@/recoil/atoms/navigateAtom";
-import { useSetRecoilState } from "recoil";
+import { useRecoilState } from "recoil";
 import { useEffect } from "react";
 
 export default function Home() {
-  const setNavigation = useSetRecoilState(navigateState);
+  const [navigation, setNavigation] = useRecoilState(navigateState);
 
   useEffect(() => {
     setNavigation("beranda");
-  }, []);
+  }, [navigation]);
 
   return (
     <>

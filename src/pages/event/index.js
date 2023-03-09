@@ -4,7 +4,17 @@ import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
 import Head from "next/head";
 import Pagination from "@/components/Pagination";
-function index() {
+import { useRecoilState } from "recoil";
+import navigateState from "@/recoil/atoms/navigateAtom";
+import { useEffect } from "react";
+
+function Event() {
+  const [navigation, setNavigation] = useRecoilState(navigateState);
+
+  useEffect(() => {
+    setNavigation("event");
+  }, [navigation]);
+
   return (
     <>
       <Head>
@@ -85,4 +95,4 @@ function index() {
   );
 }
 
-export default index;
+export default Event;

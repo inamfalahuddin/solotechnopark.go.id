@@ -6,15 +6,15 @@ import HeroImage from "@/images/Foto-Web.webp";
 import Image from "next/image";
 import Card from "@/components/cards/Card";
 import Button from "@/components/Button";
-import { useSetRecoilState } from "recoil";
+import { useRecoilState } from "recoil";
 import navigateState from "@/recoil/atoms/navigateAtom";
 
 function Kontak() {
-  const setNavigation = useSetRecoilState(navigateState);
+  const [navigation, setNavigation] = useRecoilState(navigateState);
 
   useEffect(() => {
     setNavigation("kontak");
-  }, []);
+  }, [navigation]);
 
   return (
     <>

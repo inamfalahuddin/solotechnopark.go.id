@@ -5,10 +5,10 @@ import Pagination from "@/components/Pagination";
 import navigateState from "@/recoil/atoms/navigateAtom";
 import Head from "next/head";
 import React, { useEffect } from "react";
-import { useSetRecoilState } from "recoil";
+import { useRecoilState } from "recoil";
 
 function Berita() {
-  const setNavigation = useSetRecoilState(navigateState);
+  const [navigation, setNavigation] = useRecoilState(navigateState);
 
   useEffect(() => {
     setNavigation("berita");

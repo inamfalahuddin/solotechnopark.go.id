@@ -1,5 +1,5 @@
 import Image from "next/image";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import LogoSTP from "@/images/Logo-Technopark-Remake-Solo-1.webp";
 import ArrowDown from "@/images/down-arrow-svgrepo-com.svg";
 import Link from "next/link";
@@ -15,6 +15,10 @@ function Navbar() {
   const onClickHamburger = (e) => {
     setIsOpen(!isOpen);
   };
+
+  useEffect(() => {
+    console.log(navigation);
+  }, []);
 
   return (
     <nav
