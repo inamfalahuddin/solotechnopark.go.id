@@ -12,7 +12,7 @@ import Image from "next/image";
 import Footer from "@/components/Footer";
 import { useEffect } from "react";
 import { useRecoilState } from "recoil";
-import navigateState from "@/recoil/atoms/navigateAtom";
+import navigateState from "@/recoil/navigateAtom";
 
 export default function Profile() {
   const [navigation, setNavigation] = useRecoilState(navigateState);

@@ -1,7 +1,7 @@
 const { atom } = require("recoil");
 
 const navigateState = atom({
-  key: "",
+  key: "navigatestate",
   default: "beranda",
 });
 

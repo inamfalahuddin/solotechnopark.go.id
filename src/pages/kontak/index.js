@@ -7,7 +7,7 @@ import Image from "next/image";
 import Card from "@/components/cards/Card";
 import Button from "@/components/Button";
 import { useRecoilState } from "recoil";
-import navigateState from "@/recoil/atoms/navigateAtom";
+import navigateState from "@/recoil/navigateAtom";
 
 function Kontak() {
   const [navigation, setNavigation] = useRecoilState(navigateState);

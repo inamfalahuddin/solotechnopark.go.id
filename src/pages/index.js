@@ -14,9 +14,60 @@ import CardLayanan from "@/components/cards/CardLayanan";
 import Testimonial from "@/components/Testimonial";
 import Event from "@/components/Event";
 import Footer from "@/components/Footer";
-import navigateState from "@/recoil/atoms/navigateAtom";
-import { useRecoilState } from "recoil";
+import navigateState from "@/recoil/navigateAtom";
+import { useRecoilState, useRecoilValue } from "recoil";
 import { useEffect } from "react";
+
+const dataLayanan = [
+  {
+    foto: "https://solotechnopark.id/wp-content/uploads/2022/12/Layanan-Inkubasi.png",
+    layanan: "Layanan Inkubasi",
+    deskripsi:
+      "Pra Inkubasi Bisnis dan Teknologi, Inkubasi Bisnis dan Teknologi, Hilirisasi Riset Perguruan Tinggi, Coworking Space.",
+  },
+  {
+    foto: "https://solotechnopark.id/wp-content/uploads/2022/12/Layanan-Teknis.png",
+    layanan: "Layanan Teknis",
+    deskripsi:
+      "Diklat Mekanik Manufaktur, Diklat Desain Manufaktur, Diklat General Welding, Diklat Underwater Wet Welding, Diklat Otomasi, Diklat Mekanik Garmen, Diklat Basic Aircraft Structure.",
+  },
+  {
+    foto: "https://solotechnopark.id/wp-content/uploads/2022/12/Pendukunga.png",
+    layanan: "Layanan Pendukung",
+    deskripsi:
+      "Diklat Mekanik Manufaktur, Diklat Desain Manufaktur, Diklat General Welding, Diklat Underwater Wet Welding, Diklat Otomasi, Diklat Mekanik Garmen, Diklat Basic Aircraft Structure",
+  },
+  {
+    foto: "https://solotechnopark.id/wp-content/uploads/2022/12/Pengembangan-Teknoologi.png",
+    layanan: "Pengembangan Teknologi",
+    deskripsi:
+      "Layanan Konsultasi Mitra Industri, Layanan Produksi, Spare Part Industri, Precision Part, Mold Maker, Fabrikasi, Prototype untuk UMKM/IKM.",
+  },
+];
+
+const dataCluster = [
+  {
+    id_cluster: 416252,
+    foto: "http://www.w3.org/2000/svg",
+    nama_cluster: "Cluster Manufaktur",
+    divisi:
+      '["Mekanik dan Desain","Manufaktur","Pengelasan (General & Under Water)","Otomasi","Oil and Gas Training"]',
+  },
+  {
+    id_cluster: 553975,
+    foto: "http://www.w3.org/2000/svg",
+    nama_cluster: "Cluster Technopreneurship",
+    divisi:
+      '["Mekanik dan Desain","Manufaktur","Pengelasan (General & Under Water)","Otomasi","Oil and Gas Training"]',
+  },
+  {
+    id_cluster: 645611,
+    foto: "http://www.w3.org/2000/svg",
+    nama_cluster: "Cluster Industri Kreatif",
+    divisi:
+      '["Mekanik dan Desain","Manufaktur","Pengelasan (General & Under Water)","Otomasi","Oil and Gas Training"]',
+  },
+];
 
 export default function Home() {
   const [navigation, setNavigation] = useRecoilState(navigateState);
@@ -67,15 +118,20 @@ export default function Home() {
             </h2>
 
             <div className="lg:grid lg:grid-cols-3 gap-10 my-20">
-              <Card className="p-5">
-                <CardSektor src={IconManufaktur} title="Cluster Manufaktur" />
-              </Card>
-              <Card className="p-5">
-                <CardSektor src={IconManufaktur} title="Cluster Manufaktur" />
-              </Card>
-              <Card className="p-5">
-                <CardSektor src={IconManufaktur} title="Cluster Manufaktur" />
-              </Card>
+              {dataCluster &&
+                dataCluster.map((data) => {
+                  return (
+                    <Card key={data.id_cluster} className="p-5">
+                      <CardSektor
+                        src={data.foto}
+                        title={data.nama_cluster}
+                        desc={JSON.parse(data.divisi)}
+                      />
+                    </Card>
+                  );
+                })}
+
+              {console.log(dataCluster)}
             </div>
           </div>
         </section>
@@ -128,10 +184,17 @@ export default function Home() {
               Layanan dasar solo technopark
             </h2>
             <div className="flex flex-wrap justify-center mt-10 gap-10">
-              <CardLayanan src="" title="layanan teknis" />
-              <CardLayanan src="" title="pengembangan teknologi" />
-              <CardLayanan src="" title="layanan inkubasi" />
-              <CardLayanan src="" title="layanan pendukung" />
+              {dataLayanan &&
+                dataLayanan.map((data, i) => {
+                  return (
+                    <CardLayanan
+                      key={i}
+                      src={data.foto}
+                      title={data.layanan}
+                      desc={data.deskripsi}
+                    />
+                  );
+                })}
             </div>
           </div>
         </section>

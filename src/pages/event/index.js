@@ -5,7 +5,7 @@ import Navbar from "@/components/Navbar";
 import Head from "next/head";
 import Pagination from "@/components/Pagination";
 import { useRecoilState } from "recoil";
-import navigateState from "@/recoil/atoms/navigateAtom";
+import navigateState from "@/recoil/navigateAtom";
 import { useEffect } from "react";
 
 function Event() {

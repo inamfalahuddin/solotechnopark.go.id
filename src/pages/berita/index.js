@@ -2,7 +2,7 @@ import Event from "@/components/Event";
 import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
 import Pagination from "@/components/Pagination";
-import navigateState from "@/recoil/atoms/navigateAtom";
+import navigateState from "@/recoil/navigateAtom";
 import Head from "next/head";
 import React, { useEffect } from "react";
 import { useRecoilState } from "recoil";

@@ -4,7 +4,7 @@ import LogoSTP from "@/images/Logo-Technopark-Remake-Solo-1.webp";
 import ArrowDown from "@/images/down-arrow-svgrepo-com.svg";
 import Link from "next/link";
 import { useRecoilState } from "recoil";
-import navigateState from "@/recoil/atoms/navigateAtom";
+import navigateState from "@/recoil/navigateAtom";
 
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -15,10 +15,6 @@ function Navbar() {
   const onClickHamburger = (e) => {
     setIsOpen(!isOpen);
   };
-
-  useEffect(() => {
-    console.log(navigation);
-  }, []);
 
   return (
     <nav
@@ -31,7 +27,7 @@ function Navbar() {
         </Link>
         {/* Navigate */}
         <div
-          className="p-3 rounded-full bg-slate-50 lg:hover:bg-slate-50 cursor-pointer transition-all md:hidden right-5 fixed z-50"
+          className="p-3 rounded-full bg-slate-50 lg:hover:bg-slate-50 cursor-pointer transition-all lg:hidden right-5 fixed z-50"
           onClick={onClickHamburger}
         >
           <div className="w-6 h-6 flex flex-col items-center justify-between">
@@ -53,14 +49,16 @@ function Navbar() {
           </div>
         </div>
         <div
-          className={`text-md bg-gray-50 md:bg-transparent fixed md:relative left-0 right-0 top-0 bottom-0 flex flex-col md:flex-row justify-center md:justify-between items-center gap-5 p-5 transition-all ${
-            isOpen ? "translate-x-[0%]" : "translate-x-[100%] md:translate-x-0"
+          className={`text-md bg-gray-50 lg:bg-transparent fixed lg:relative left-0 right-0 top-0 bottom-0 flex flex-col lg:flex-row justify-center lg:justify-between items-center gap-5 p-5 transition-all ${
+            isOpen ? "translate-x-[0%]" : "translate-x-[100%] lg:translate-x-0"
           }
           }`}
         >
           <Link
             className={`px-3  transition-all hover:text-primary-100 ${
-              navigation === "beranda" ? "font-bold text-primary-100" : null
+              navigation && navigation === "beranda"
+                ? "font-bold text-primary-100"
+                : null
             }`}
             href={"/"}
           >
@@ -68,7 +66,9 @@ function Navbar() {
           </Link>
           <Link
             className={`px-3  transition-all hover:text-primary-100 ${
-              navigation === "profil" ? "font-bold text-primary-100" : null
+              navigation && navigation === "profil"
+                ? "font-bold text-primary-100"
+                : null
             }`}
             href={"/profil"}
           >
@@ -83,7 +83,7 @@ function Navbar() {
             >
               <span>Layanan</span>
               <Image
-                className="hidden md:inline-block"
+                className="hidden lg:inline-block"
                 width={14}
                 src={ArrowDown}
                 alt="layanan"
@@ -123,7 +123,9 @@ function Navbar() {
           </span>
           <Link
             className={`px-3  transition-all hover:text-primary-100 ${
-              navigation === "event" ? "font-bold text-primary-100" : null
+              navigation && navigation === "event"
+                ? "font-bold text-primary-100"
+                : null
             }`}
             href={"/event"}
           >
@@ -131,7 +133,9 @@ function Navbar() {
           </Link>
           <Link
             className={`px-3  transition-all hover:text-primary-100 ${
-              navigation === "kontak" ? "font-bold text-primary-100" : null
+              navigation && navigation === "kontak"
+                ? "font-bold text-primary-100"
+                : null
             }`}
             href={"/kontak"}
           >
@@ -139,7 +143,9 @@ function Navbar() {
           </Link>
           <Link
             className={`px-3  transition-all hover:text-primary-100 ${
-              navigation === "berita" ? "font-bold text-primary-100" : null
+              navigation && navigation === "berita"
+                ? "font-bold text-primary-100"
+                : null
             }`}
             href={"/berita"}
           >
